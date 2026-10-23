@@ -1,0 +1,32 @@
+/**:
+  controller_manager:
+    ros__parameters:
+      # 팀 운용 주기. WSL USB/IP 지연으로 이전 async cycle이 남아 있으면
+      # controller_manager가 해당 read/write trigger를 건너뛸 수 있다.
+      update_rate: 30
+
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+
+      replay_controller:
+        type: joint_trajectory_controller/JointTrajectoryController
+
+/**:
+  replay_controller:
+    ros__parameters:
+      joints:
+        - joint1
+        - joint2
+        - joint3
+        - joint4
+        - joint5
+        - gripper_joint_1
+
+      command_interfaces:
+        - position
+
+      state_interfaces:
+        - position
+        - velocity
+
+      allow_partial_joints_goal: false

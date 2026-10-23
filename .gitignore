@@ -1,0 +1,18 @@
+# ROS 2 / colcon generated files
+build/
+install/
+log/
+
+# Recorded trajectories (local runtime data)
+trajectory.csv
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
